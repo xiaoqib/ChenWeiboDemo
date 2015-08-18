@@ -53,12 +53,6 @@
 }
 
 #pragma mark - UIWebView的代理方法
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-    NSString *url = webView.request.URL.absoluteString;
-    NSLog(@"%@",url);
-    return YES;
-}
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     NSLog(@"222222222");
