@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "AFNetworking.h"
 
 @interface FirstViewController ()
 @property (strong,nonatomic)UITextView *textView;
@@ -96,10 +97,14 @@
         make.bottom.equalTo(buttonView.mas_bottom);
         make.left.equalTo(buttonView.mas_left);
     }];
+}
+-(void)publish{
+    NSString *requestUrl = @"https://api.weibo.com/2/statuses/update.json";
+    NSURLRequest *nsUrlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:nsUrlRequest];
     
     
     
-                            
 }
 
 - (void)didReceiveMemoryWarning {
