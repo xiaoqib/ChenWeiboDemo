@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LandingView : UIView
-
--(id)initWithFrame:(CGRect)frame;
+@interface LandingView : UIView<UIWebViewDelegate>
+@property (nonatomic,strong) UIWebView *webView;
+@property BOOL isGetToken;
+-(id)init;
 
 @end

@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "LandingView.h"
+#import "Masonry.h"
+
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong)LandingView *landingView;
 
 @end
 
@@ -22,8 +30,58 @@
     self.rootView = [[ViewController alloc]init];
     [self.window setRootViewController:self.rootView];
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
+    tabBarController = [[UITabBarController alloc]init];
+    [self.window setRootViewController:tabBarController];
+    
+    FirstViewController *first = [[FirstViewController alloc]init];
+    SecondViewController *second = [[SecondViewController alloc]init];
+    ThirdViewController  *third = [[ThirdViewController alloc]init];
+    
+    tabBarController.viewControllers = [NSArray arrayWithObjects:first,second,third,nil];
+    
+    UIImage * image1 = [UIImage imageNamed:@"sad.png"];
+    UIImage * image2 = [UIImage imageNamed:@"bigsmile.png"];
+    UIImage * image3 = [UIImage imageNamed:@"tongue.png"];
+    UIImage * image4 = [UIImage imageNamed:@"smirk.png"];
+    UIImage * image5 = [UIImage imageNamed:@"blah.png"];
+    UIImage * image6 = [UIImage imageNamed:@"scream.png"];
+    
+    
+    UITabBar *tabBar = tabBarController.tabBar;
+    UITabBarItem *firstItem = [[tabBar.items objectAtIndex:0]initWithTitle:@"发微博" image:image1 selectedImage:image2];
+    UITabBarItem *secondItem = [[tabBar.items objectAtIndex:1]initWithTitle:@"信息" image:image3 selectedImage:image4];
+    UITabBarItem *thirdItem = [[tabBar.items objectAtIndex:2]initWithTitle:@"个人" image:image5 selectedImage:image6];
+    
+    tabBar.backgroundColor = [UIColor grayColor];
+    
+    
+    tabBar.barStyle = UIBarStyleBlack;
+    
+    tabBar.selectedImageTintColor = [UIColor colorWithRed:128.0f green:0.0f blue:150.0f alpha:1.0f];
+   
+    _landingView = [[LandingView alloc]init];
+    
+    [self.window addSubview:_landingView];
+    [_landingView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.top.equalTo(self.window.mas_top);
+        make.left.equalTo(self.window.mas_left);
+        make.right.equalTo(self.window.mas_right);
+        make.bottom.equalTo(self.window.mas_bottom);
+    }];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(callback) name:@"cancelView" object:nil];
+    
+    
     return YES;
 }
+-(void)callback{
+    _landingView.hidden = YES;
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
