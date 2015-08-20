@@ -11,6 +11,7 @@
 
 @interface FirstViewController ()
 @property (strong,nonatomic)UITextView *textView;
+@property (strong,nonatomic)NSString *token;
 @end
 
 @implementation FirstViewController
@@ -19,6 +20,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     _textView = [[UITextView alloc]init];
+    _textView.font = [UIFont systemFontOfSize:18];
+    _textView.textColor =self.view.backgroundColor;
     // textView 文本框
     [self.view addSubview:_textView];
     [_textView mas_makeConstraints:^(MASConstraintMaker *make){
@@ -89,6 +92,8 @@
     
     publishButton.titleLabel.font = [UIFont systemFontOfSize:20];
     
+    [publishButton addTarget:self action:@selector(publish) forControlEvents:UIControlEventTouchDragInside];
+    
     [publishButton setTitle:@"发送" forState:UIControlStateNormal];
     [buttonView addSubview:publishButton];
     [publishButton mas_makeConstraints:^(MASConstraintMaker *make){
@@ -97,15 +102,26 @@
         make.bottom.equalTo(buttonView.mas_bottom);
         make.left.equalTo(buttonView.mas_left);
     }];
+    
+   
 }
 -(void)publish{
-    NSString *requestUrl = @"https://api.weibo.com/2/statuses/update.json";
-    NSURLRequest *nsUrlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:requestUrl]];
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:nsUrlRequest];
     
-    
-    
+     NSLog(@"111111111111111111111111111111111111111111111%@", _landinView.token);
+    self.token =@"2.00bbxnbDlad46D750c2443devtOLHC";
+    NSLog(@"access_token  = %@",self.token);
+    NSString *str = self.textView.text;
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{@"access_token": self.token,
+                             @"status": str};
+    [manager POST:@"https://api.weibo.com/2/statuses/update.json" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

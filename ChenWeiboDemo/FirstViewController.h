@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
+#import "LandingView.h"
+
 @interface FirstViewController : UIViewController
+
+@property (strong,nonatomic)LandingView *landinView;
 
 @end

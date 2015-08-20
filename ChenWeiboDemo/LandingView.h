@@ -10,6 +10,8 @@
 
 @interface LandingView : UIView<UIWebViewDelegate>
 @property (nonatomic,strong) UIWebView *webView;
+@property (nonatomic,strong) NSString *access_token;
+@property (nonatomic,strong) NSString *token;
 @property BOOL isGetToken;
 -(id)init;
 

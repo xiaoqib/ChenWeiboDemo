@@ -64,6 +64,7 @@
     tabBar.selectedImageTintColor = [UIColor colorWithRed:128.0f green:0.0f blue:150.0f alpha:1.0f];
    
     _landingView = [[LandingView alloc]init];
+    first.landinView = _landingView;
     
     [self.window addSubview:_landingView];
     [_landingView mas_makeConstraints:^(MASConstraintMaker *make){

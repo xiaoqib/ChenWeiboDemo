@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 
 #import "AFURLResponseSerialization.h"
-
-#if TARGET_OS_IOS
 #import <UIKit/UIKit.h>
+#if TARGET_OS_IOS
+
 #elif TARGET_OS_WATCH
 #import <WatchKit/WatchKit.h>
 #elif defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
@@ -530,6 +530,7 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 
 #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 #import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
 
 @interface UIImage (AFNetworkingSafeImageLoading)
 + (UIImage *)af_safeImageWithData:(NSData *)data;

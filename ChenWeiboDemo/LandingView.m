@@ -87,12 +87,15 @@
     //如何从str1中获取到access_token
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:received options:NSJSONReadingMutableContainers error:&error];
     
-    NSString *_access_token = [dictionary objectForKey:@"access_token"];
+    _access_token = [dictionary objectForKey:@"access_token"];
     
     NSLog(@"access token is:%@",_access_token);
-    
+    self.token = _access_token;
     if (_access_token != NULL) {
+        
+        
         [[NSNotificationCenter defaultCenter]postNotificationName:@"cancelView" object:self];
+        
     }
     
 }
