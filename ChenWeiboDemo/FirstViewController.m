@@ -12,6 +12,7 @@
 @interface FirstViewController ()
 @property (strong,nonatomic)UITextView *textView;
 @property (strong,nonatomic)NSString *token;
+@property (strong,nonatomic)UIView *buttonView;
 @end
 
 @implementation FirstViewController
@@ -71,22 +72,60 @@
     
     // 发表上传按钮
     
-    UIView *buttonView = [[UIView alloc]init];
-    buttonView.backgroundColor = [UIColor whiteColor];
+    _buttonView = [[UIView alloc]init];
+    _buttonView.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:buttonView];
-    [buttonView mas_makeConstraints:^(MASConstraintMaker *make){
+    [self.view addSubview:_buttonView];
+    [_buttonView mas_makeConstraints:^(MASConstraintMaker *make){
         make.top.equalTo(self.view.mas_top).with.offset(150);
         make.right.equalTo(self.view.mas_right).with.offset(-40);
         make.width.equalTo(@(50));
         make.height.equalTo(@(22));
     }];
     
+    UIView *view5 = [[UIView alloc]init];
+    view5.backgroundColor = self.view.backgroundColor;
+    [_buttonView addSubview:view5];
+    [view5 mas_makeConstraints:^(MASConstraintMaker *make){
+        make.top.equalTo(_buttonView.mas_top);
+        make.left.equalTo(_buttonView.mas_left);
+        make.width.equalTo(@(4));
+        make.height.equalTo(@(4));
+    }];
+    
+    UIView *view6 = [[UIView alloc]init];
+    view6.backgroundColor = self.view.backgroundColor;
+    [_buttonView addSubview:view6];
+    [view6 mas_makeConstraints:^(MASConstraintMaker *make){
+        make.top.equalTo(_buttonView.mas_top);
+        make.right.equalTo(_buttonView.mas_right);
+        make.width.equalTo(@(4));
+        make.height.equalTo(@(4));
+    }];
+    UIView *view7 = [[UIView alloc]init];
+    view7.backgroundColor = self.view.backgroundColor;
+    [_buttonView addSubview:view7];
+    [view7 mas_makeConstraints:^(MASConstraintMaker *make){
+        make.bottom.equalTo(_buttonView.mas_bottom);
+        make.left.equalTo(_buttonView.mas_left);
+        make.width.equalTo(@(4));
+        make.height.equalTo(@(4));
+    }];
+    UIView *view8 = [[UIView alloc]init];
+    view8.backgroundColor = self.view.backgroundColor;
+    [_buttonView addSubview:view8];
+    [view8 mas_makeConstraints:^(MASConstraintMaker *make){
+        make.bottom.equalTo(_buttonView.mas_bottom);
+        make.right.equalTo(_buttonView.mas_right);
+        make.width.equalTo(@(4));
+        make.height.equalTo(@(4));
+    }];
+    
     
     UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
     
-    [publishButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [publishButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     
     publishButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     
@@ -95,20 +134,56 @@
     [publishButton addTarget:self action:@selector(publish) forControlEvents:UIControlEventTouchDragInside];
     
     [publishButton setTitle:@"发送" forState:UIControlStateNormal];
-    [buttonView addSubview:publishButton];
+    [_buttonView addSubview:publishButton];
     [publishButton mas_makeConstraints:^(MASConstraintMaker *make){
-        make.top.equalTo(buttonView.mas_top);
-        make.right.equalTo(buttonView.mas_right);
-        make.bottom.equalTo(buttonView.mas_bottom);
-        make.left.equalTo(buttonView.mas_left);
+        make.top.equalTo(_buttonView.mas_top);
+        make.right.equalTo(_buttonView.mas_right);
+        make.bottom.equalTo(_buttonView.mas_bottom);
+        make.left.equalTo(_buttonView.mas_left);
     }];
     
+    
+    //键盘关闭手势
+    [self tapBackground];
+    
+    //注册观察者中心
+    NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(textDidBiginEditing:) name:UITextViewTextDidBeginEditingNotification object:nil];
+    [nc addObserver:self selector:@selector(textDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:nil];
+}
+
+-(void) textDidBiginEditing:(NSNotification *) notification{
+    
+    _buttonView.backgroundColor = [UIColor colorWithRed:255/255.0f green:20/255.0f blue:255/255.0f alpha:1.0f];
    
 }
--(void)publish{
+-(void) textDidEndEditing:(NSNotification *) notification{
+    if ([_textView.text  isEqual:@""]) {
+        _buttonView.backgroundColor = [UIColor whiteColor];
+    }
+  
     
-     NSLog(@"111111111111111111111111111111111111111111111%@", _landinView.token);
-    self.token =@"2.00bbxnbDlad46D750c2443devtOLHC";
+     NSLog(@"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+}
+
+
+-(void)tapBackground //在ViewDidLoad中调用
+{
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnce)];//定义一个手势
+    [tap setNumberOfTouchesRequired:1];//触击次数这里设为1
+    [self.view addGestureRecognizer:tap];//添加手势到View中
+}
+-(void)tapOnce//手势方法
+{
+    [self.textView resignFirstResponder];
+}
+
+
+
+
+-(void)publish{
+
+    self.token =_landinView.token;
     NSLog(@"access_token  = %@",self.token);
     NSString *str = self.textView.text;
 
