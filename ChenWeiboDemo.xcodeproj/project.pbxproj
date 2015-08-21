@@ -320,8 +320,8 @@
 		168D39141B86F5C700072452 /* NetWork/网络行为 */ = {
 			isa = PBXGroup;
 			children = (
-				1609A98B1B82CF0C00E0A666 /* LandingView.m */,
 				1609A98A1B82CF0C00E0A666 /* LandingView.h */,
+				1609A98B1B82CF0C00E0A666 /* LandingView.m */,
 				168D39151B86F7C900072452 /* WeiboAPIManager.h */,
 				168D39161B86F7C900072452 /* WeiboAPIManager.m */,
 			);
