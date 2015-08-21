@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1609A9671B82CDE000E0A666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609A9661B82CDE000E0A666 /* main.m */; };
 		1609A96A1B82CDE000E0A666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609A9691B82CDE000E0A666 /* AppDelegate.m */; };
-		1609A96D1B82CDE000E0A666 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609A96C1B82CDE000E0A666 /* ViewController.m */; };
 		1609A9701B82CDE000E0A666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1609A96E1B82CDE000E0A666 /* Main.storyboard */; };
 		1609A9721B82CDE000E0A666 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1609A9711B82CDE000E0A666 /* Images.xcassets */; };
 		1609A9751B82CDE000E0A666 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1609A9731B82CDE000E0A666 /* LaunchScreen.xib */; };
@@ -45,6 +44,9 @@
 		1609AA451B85AFE000E0A666 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609AA3A1B85AFE000E0A666 /* AFURLRequestSerialization.m */; };
 		1609AA461B85AFE000E0A666 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609AA3C1B85AFE000E0A666 /* AFURLResponseSerialization.m */; };
 		1609AA471B85AFE000E0A666 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609AA3E1B85AFE000E0A666 /* AFURLSessionManager.m */; };
+		168D39101B86CDBD00072452 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 168D390F1B86CDBD00072452 /* User.m */; };
+		168D39131B86CDDF00072452 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 168D39121B86CDDF00072452 /* Status.m */; };
+		168D39171B86F7C900072452 /* WeiboAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 168D39161B86F7C900072452 /* WeiboAPIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +65,6 @@
 		1609A9661B82CDE000E0A666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1609A9681B82CDE000E0A666 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1609A9691B82CDE000E0A666 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1609A96B1B82CDE000E0A666 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1609A96C1B82CDE000E0A666 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1609A96F1B82CDE000E0A666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1609A9711B82CDE000E0A666 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1609A9741B82CDE000E0A666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -131,6 +131,12 @@
 		1609AA3C1B85AFE000E0A666 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		1609AA3D1B85AFE000E0A666 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		1609AA3E1B85AFE000E0A666 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		168D390E1B86CDBD00072452 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		168D390F1B86CDBD00072452 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		168D39111B86CDDF00072452 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status.h; path = ../Status.h; sourceTree = "<group>"; };
+		168D39121B86CDDF00072452 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Status.m; path = ../Status.m; sourceTree = "<group>"; };
+		168D39151B86F7C900072452 /* WeiboAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAPIManager.h; sourceTree = "<group>"; };
+		168D39161B86F7C900072452 /* WeiboAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAPIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,25 +180,12 @@
 			children = (
 				1609AA2B1B85AFE000E0A666 /* AFNetworking */,
 				1609A9931B82DB6D00E0A666 /* Masonry */,
+				168D390B1B86CC0E00072452 /* Picture/图片 */,
+				168D390C1B86CC7800072452 /* MainViewController/三级根视图控制器 */,
+				168D390D1B86CCC400072452 /* Models/模型 */,
+				168D39141B86F5C700072452 /* NetWork/网络行为 */,
 				1609A9681B82CDE000E0A666 /* AppDelegate.h */,
 				1609A9691B82CDE000E0A666 /* AppDelegate.m */,
-				1609A96B1B82CDE000E0A666 /* ViewController.h */,
-				1609A96C1B82CDE000E0A666 /* ViewController.m */,
-				1609A98A1B82CF0C00E0A666 /* LandingView.h */,
-				1609A98B1B82CF0C00E0A666 /* LandingView.m */,
-				1609A9D21B8477E500E0A666 /* upload.png */,
-				1609A9C81B8455F500E0A666 /* sad.png */,
-				1609A9CA1B84560200E0A666 /* bigsmile.png */,
-				1609A9C41B8449DA00E0A666 /* tongue.png */,
-				1609A9CC1B84560200E0A666 /* smirk.png */,
-				1609A9CB1B84560200E0A666 /* blah.png */,
-				1609A9CD1B84560200E0A666 /* scream.png */,
-				1609A9B91B842B8300E0A666 /* FirstViewController.h */,
-				1609A9BA1B842B8300E0A666 /* FirstViewController.m */,
-				1609A9BC1B842B9900E0A666 /* SecondViewController.h */,
-				1609A9BD1B842B9900E0A666 /* SecondViewController.m */,
-				1609A9BF1B842BC900E0A666 /* ThirdViewController.h */,
-				1609A9C01B842BC900E0A666 /* ThirdViewController.m */,
 				1609A96E1B82CDE000E0A666 /* Main.storyboard */,
 				1609A9711B82CDE000E0A666 /* Images.xcassets */,
 				1609A9731B82CDE000E0A666 /* LaunchScreen.xib */,
@@ -284,6 +277,55 @@
 				1609AA3E1B85AFE000E0A666 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		168D390B1B86CC0E00072452 /* Picture/图片 */ = {
+			isa = PBXGroup;
+			children = (
+				1609A9D21B8477E500E0A666 /* upload.png */,
+				1609A9C81B8455F500E0A666 /* sad.png */,
+				1609A9CA1B84560200E0A666 /* bigsmile.png */,
+				1609A9C41B8449DA00E0A666 /* tongue.png */,
+				1609A9CC1B84560200E0A666 /* smirk.png */,
+				1609A9CB1B84560200E0A666 /* blah.png */,
+				1609A9CD1B84560200E0A666 /* scream.png */,
+			);
+			name = "Picture/图片";
+			sourceTree = "<group>";
+		};
+		168D390C1B86CC7800072452 /* MainViewController/三级根视图控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				1609A9B91B842B8300E0A666 /* FirstViewController.h */,
+				1609A9BA1B842B8300E0A666 /* FirstViewController.m */,
+				1609A9BC1B842B9900E0A666 /* SecondViewController.h */,
+				1609A9BD1B842B9900E0A666 /* SecondViewController.m */,
+				1609A9BF1B842BC900E0A666 /* ThirdViewController.h */,
+				1609A9C01B842BC900E0A666 /* ThirdViewController.m */,
+			);
+			name = "MainViewController/三级根视图控制器";
+			sourceTree = "<group>";
+		};
+		168D390D1B86CCC400072452 /* Models/模型 */ = {
+			isa = PBXGroup;
+			children = (
+				168D39111B86CDDF00072452 /* Status.h */,
+				168D39121B86CDDF00072452 /* Status.m */,
+				168D390E1B86CDBD00072452 /* User.h */,
+				168D390F1B86CDBD00072452 /* User.m */,
+			);
+			name = "Models/模型";
+			sourceTree = "<group>";
+		};
+		168D39141B86F5C700072452 /* NetWork/网络行为 */ = {
+			isa = PBXGroup;
+			children = (
+				1609A98B1B82CF0C00E0A666 /* LandingView.m */,
+				1609A98A1B82CF0C00E0A666 /* LandingView.h */,
+				168D39151B86F7C900072452 /* WeiboAPIManager.h */,
+				168D39161B86F7C900072452 /* WeiboAPIManager.m */,
+			);
+			name = "NetWork/网络行为";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,13 +436,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168D39101B86CDBD00072452 /* User.m in Sources */,
 				1609AA3F1B85AFE000E0A666 /* AFHTTPRequestOperation.m in Sources */,
 				1609A9B11B82DB6D00E0A666 /* MASConstraintMaker.m in Sources */,
+				168D39171B86F7C900072452 /* WeiboAPIManager.m in Sources */,
 				1609A98C1B82CF0C00E0A666 /* LandingView.m in Sources */,
-				1609A96D1B82CDE000E0A666 /* ViewController.m in Sources */,
 				1609A9B01B82DB6D00E0A666 /* MASConstraint.m in Sources */,
 				1609A9B81B82DB6D00E0A666 /* ViewController+MASAdditions.m in Sources */,
 				1609A9B21B82DB6D00E0A666 /* MASLayoutConstraint.m in Sources */,
+				168D39131B86CDDF00072452 /* Status.m in Sources */,
 				1609AA411B85AFE000E0A666 /* AFHTTPSessionManager.m in Sources */,
 				1609A9B51B82DB6D00E0A666 /* NSArray+MASAdditions.m in Sources */,
 				1609A9C11B842BC900E0A666 /* ThirdViewController.m in Sources */,

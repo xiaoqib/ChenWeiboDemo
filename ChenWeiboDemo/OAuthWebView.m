@@ -51,7 +51,8 @@
 
 #pragma mark - UIWebView的代理方法
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
-
+    NSLog(@"222222222");
+    
     NSString *url = webView.request.URL.absoluteString;
     NSLog(@"absolutestring:%@",url);
     
@@ -91,6 +92,7 @@
     NSLog(@"access token is:%@",_access_token);
     self.token = _access_token;
     if (_access_token != NULL) {
+        
         
         [[NSNotificationCenter defaultCenter]postNotificationName:@"cancelView" object:self];
         
