@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>3D4382B9-60D8-4DB7-8553-C9C6251A55A3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ChenWeiboDemo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>51C186051DA40EA8990967954C814D0A1FED5BB7</key>
 		<string>https://github.com/xiaoqib/ChenWeiboDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ChenWeiboDemo.xcodeproj</string>
+	<string>ChenWeiboDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>51C186051DA40EA8990967954C814D0A1FED5BB7</key>

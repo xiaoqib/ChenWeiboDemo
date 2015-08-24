@@ -17,10 +17,19 @@
 @property (nonatomic,strong) UILabel *individualLabel;//简介Label
 @property (nonatomic,strong) UIImageView *avatarImageViewi;//头像View
 
-
+//初始化
 -(id)init;
-
+//背景图片
 -(void)setBackgroundImage:(UIImage *)backgroundImage;
-
+//头像
 -(void)setAvatarImageView:(UIImage *)avatarImage;
+//昵称
+-(void)changeName:(NSString *)name;
+//关注数
+-(void)changeFollowCountLabel:(int)followCount;
+//粉丝数
+-(void)changeFansCountLabel:(int)fansCount;
+//简介
+-(void)changeIndividualLabel:(NSString *)individual;
+
 @end
