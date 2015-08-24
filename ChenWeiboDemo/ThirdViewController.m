@@ -8,19 +8,30 @@
 
 #import "ThirdViewController.h"
 #import "Masonry.h"
+#import "UserInformationView.h"
 
 @interface ThirdViewController ()
-
+@property (nonatomic,strong) UserInformationView *userInformationView;
 
 @end
 
 @implementation ThirdViewController
+@synthesize userInformationView;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor grayColor];
+    userInformationView = [[UserInformationView alloc]init];
+    [self.view addSubview:userInformationView];
+    [userInformationView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(self.view.mas_top);
+        make.height.equalTo(@([[UIScreen mainScreen]bounds].size.height/3));
+    }];
+    
     
    
 }

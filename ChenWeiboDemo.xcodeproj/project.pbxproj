@@ -47,6 +47,10 @@
 		168D39101B86CDBD00072452 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 168D390F1B86CDBD00072452 /* User.m */; };
 		168D39131B86CDDF00072452 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 168D39121B86CDDF00072452 /* Status.m */; };
 		168D39171B86F7C900072452 /* WeiboAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 168D39161B86F7C900072452 /* WeiboAPIManager.m */; };
+		16BFB14E1B8AB6B100F429D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BFB14D1B8AB6B100F429D9 /* ViewController.m */; };
+		16BFB1511B8AFCC100F429D9 /* UserInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BFB1501B8AFCC100F429D9 /* UserInformationView.m */; };
+		16BFB18A1B8B111C00F429D9 /* bj2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16BFB1891B8B111C00F429D9 /* bj2.jpg */; };
+		16BFB18C1B8B171500F429D9 /* IMG_2522.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 16BFB18B1B8B171500F429D9 /* IMG_2522.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +141,12 @@
 		168D39121B86CDDF00072452 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Status.m; path = ../Status.m; sourceTree = "<group>"; };
 		168D39151B86F7C900072452 /* WeiboAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAPIManager.h; sourceTree = "<group>"; };
 		168D39161B86F7C900072452 /* WeiboAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAPIManager.m; sourceTree = "<group>"; };
+		16BFB14C1B8AB6B100F429D9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		16BFB14D1B8AB6B100F429D9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		16BFB14F1B8AFCC100F429D9 /* UserInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInformationView.h; sourceTree = "<group>"; };
+		16BFB1501B8AFCC100F429D9 /* UserInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInformationView.m; sourceTree = "<group>"; };
+		16BFB1891B8B111C00F429D9 /* bj2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bj2.jpg; sourceTree = "<group>"; };
+		16BFB18B1B8B171500F429D9 /* IMG_2522.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2522.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +196,8 @@
 				168D39141B86F5C700072452 /* NetWork/网络行为 */,
 				1609A9681B82CDE000E0A666 /* AppDelegate.h */,
 				1609A9691B82CDE000E0A666 /* AppDelegate.m */,
+				16BFB14C1B8AB6B100F429D9 /* ViewController.h */,
+				16BFB14D1B8AB6B100F429D9 /* ViewController.m */,
 				1609A96E1B82CDE000E0A666 /* Main.storyboard */,
 				1609A9711B82CDE000E0A666 /* Images.xcassets */,
 				1609A9731B82CDE000E0A666 /* LaunchScreen.xib */,
@@ -299,9 +311,13 @@
 				1609A9B91B842B8300E0A666 /* FirstViewController.h */,
 				1609A9BA1B842B8300E0A666 /* FirstViewController.m */,
 				1609A9BC1B842B9900E0A666 /* SecondViewController.h */,
+				16BFB1891B8B111C00F429D9 /* bj2.jpg */,
+				16BFB18B1B8B171500F429D9 /* IMG_2522.JPG */,
 				1609A9BD1B842B9900E0A666 /* SecondViewController.m */,
 				1609A9BF1B842BC900E0A666 /* ThirdViewController.h */,
 				1609A9C01B842BC900E0A666 /* ThirdViewController.m */,
+				16BFB14F1B8AFCC100F429D9 /* UserInformationView.h */,
+				16BFB1501B8AFCC100F429D9 /* UserInformationView.m */,
 			);
 			name = "MainViewController/三级根视图控制器";
 			sourceTree = "<group>";
@@ -408,9 +424,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BFB18A1B8B111C00F429D9 /* bj2.jpg in Resources */,
 				1609A9D31B8477E500E0A666 /* upload.png in Resources */,
 				1609A9D01B84560200E0A666 /* smirk.png in Resources */,
 				1609A9AE1B82DB6D00E0A666 /* Info.plist in Resources */,
+				16BFB18C1B8B171500F429D9 /* IMG_2522.JPG in Resources */,
 				1609A9D11B84560200E0A666 /* scream.png in Resources */,
 				1609A9CF1B84560200E0A666 /* blah.png in Resources */,
 				1609A9701B82CDE000E0A666 /* Main.storyboard in Resources */,
@@ -437,8 +455,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				168D39101B86CDBD00072452 /* User.m in Sources */,
+				16BFB14E1B8AB6B100F429D9 /* ViewController.m in Sources */,
 				1609AA3F1B85AFE000E0A666 /* AFHTTPRequestOperation.m in Sources */,
 				1609A9B11B82DB6D00E0A666 /* MASConstraintMaker.m in Sources */,
+				16BFB1511B8AFCC100F429D9 /* UserInformationView.m in Sources */,
 				168D39171B86F7C900072452 /* WeiboAPIManager.m in Sources */,
 				1609A98C1B82CF0C00E0A666 /* LandingView.m in Sources */,
 				1609A9B01B82DB6D00E0A666 /* MASConstraint.m in Sources */,

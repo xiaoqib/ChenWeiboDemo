@@ -12,6 +12,9 @@
 #import "ThirdViewController.h"
 #import "LandingView.h"
 #import "Masonry.h"
+#import "User.h"
+#import "WeiboAPIManager.h"
+
 
 
 @interface AppDelegate ()
@@ -41,6 +44,9 @@
     SecondViewController *second = [[SecondViewController alloc]init];
     ThirdViewController  *third = [[ThirdViewController alloc]init];
     
+    User *user = [User new];
+    WeiboAPIManager *weiboAPIManger = [WeiboAPIManager new];
+    
     tabBarController.viewControllers = [NSArray arrayWithObjects:first,second,third,nil];
     
     UIImage * image1 = [UIImage imageNamed:@"sad.png"];
@@ -64,7 +70,10 @@
     tabBar.selectedImageTintColor = [UIColor colorWithRed:128.0f green:0.0f blue:150.0f alpha:1.0f];
    
     _landingView = [[LandingView alloc]init];
+    
+   
     first.landinView = _landingView;
+    weiboAPIManger.landingView = first.landinView;
     
     [self.window addSubview:_landingView];
     [_landingView mas_makeConstraints:^(MASConstraintMaker *make){

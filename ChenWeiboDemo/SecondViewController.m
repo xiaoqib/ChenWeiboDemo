@@ -7,8 +7,11 @@
 //
 
 #import "SecondViewController.h"
+#import "WeiboAPIManager.h"
 
 @interface SecondViewController ()
+
+@property (nonatomic,strong) WeiboAPIManager *weiboAPIManager;
 
 @end
 
@@ -18,10 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor grayColor];
+    _weiboAPIManager = [[WeiboAPIManager alloc]initWithDelegate:self];
+    
+    [_weiboAPIManager getPublicTimelineWithCount:1 withPage:1];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 /*

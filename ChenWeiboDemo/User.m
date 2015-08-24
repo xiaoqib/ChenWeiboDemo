@@ -8,6 +8,14 @@
 
 #import "User.h"
 
+
 @implementation User
+
+@synthesize sccess_token;
+
+-(NSString *)getSccess_token{
+    sccess_token = _landingView.token;
+    return sccess_token;
+}
 
 @end

@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LandingView.h"
 
 @interface User : NSObject{
     NSString *sccess_token;
 }
 
+@property (nonatomic,strong) NSString *sccess_token;
+@property (nonatomic,strong) LandingView *landingView;
+
+-(NSString *)getSccess_token;
 @end
